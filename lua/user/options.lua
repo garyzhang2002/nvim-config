@@ -25,9 +25,9 @@ local options = {
     completeopt = {"menuone", "noselect"},
     pumheight = 10,
     timeoutlen = 1000,
-    updatetime = 500,
+    updatetime = 500
 }
 
 for k, v in pairs(options) do
-  vim.opt[k] = v
+    vim.opt[k] = v
 end
