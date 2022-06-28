@@ -1,5 +1,5 @@
 ## Usage
 
 ```
-git clone git@github.com:garyzhang2002/nvim-config.git ~/.config/nvim
+git clone https://github.com/garyzhang2002/nvim-config.git ~/.config/nvim
 ```
