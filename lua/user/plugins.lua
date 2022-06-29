@@ -54,6 +54,8 @@ return packer.startup(function(use)
     use "github/copilot.vim"
     -- commenting
     use "terrortylor/nvim-comment"
+    -- git
+    use "lewis6991/gitsigns.nvim"
     ----------------------------------------------------
 
     -- automatically set up the configuration after cloning packer.nvim
