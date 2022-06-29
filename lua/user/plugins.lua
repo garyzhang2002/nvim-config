@@ -49,6 +49,7 @@ return packer.startup(function(use)
     -------------------- my plugins --------------------
     -- colorschemes
     use "joshdick/onedark.vim"
+    use "folke/tokyonight.nvim"
     ----------------------------------------------------
 
     -- automatically set up the configuration after cloning packer.nvim
