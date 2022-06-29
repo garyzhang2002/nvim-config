@@ -41,7 +41,7 @@ packer.init {
 
 -- install plugins
 return packer.startup(function(use)
-  
+
     use "wbthomason/packer.nvim" -- have packer manage itself
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
@@ -52,6 +52,8 @@ return packer.startup(function(use)
     use "folke/tokyonight.nvim"
     -- GitHub Copilot
     use "github/copilot.vim"
+    -- commenting
+    use "terrortylor/nvim-comment"
     ----------------------------------------------------
 
     -- automatically set up the configuration after cloning packer.nvim
