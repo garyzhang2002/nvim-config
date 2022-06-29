@@ -50,6 +50,7 @@ return packer.startup(function(use)
     -- colorschemes
     use "joshdick/onedark.vim"
     use "folke/tokyonight.nvim"
+    -- GitHub Copilot
     use "github/copilot.vim"
     ----------------------------------------------------
 
