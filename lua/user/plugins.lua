@@ -52,10 +52,12 @@ return packer.startup(function(use)
     use "folke/tokyonight.nvim"
     -- GitHub Copilot
     use "github/copilot.vim"
-    -- commenting
-    use "terrortylor/nvim-comment"
     -- git
     use "lewis6991/gitsigns.nvim"
+    -- commenting
+    use "terrortylor/nvim-comment"
+    -- surround
+    use "kylechui/nvim-surround"
     ----------------------------------------------------
 
     -- automatically set up the configuration after cloning packer.nvim

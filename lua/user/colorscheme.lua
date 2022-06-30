@@ -2,8 +2,8 @@ local colorscheme = "onedark"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
-    print("Colorscheme " .. colorscheme .. " not found! Using default instead.")
+    vim.notify("Colorscheme " .. colorscheme .. " not found! Using default instead.", vim.log.levels.WARN)
     return
 end
 
-vim.cmd [[highlight Normal guibg=NONE ctermbg=NONE]] 
+vim.cmd [[highlight Normal guibg=NONE ctermbg=NONE]]

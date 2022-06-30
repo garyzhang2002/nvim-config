@@ -1,15 +1,9 @@
-vim.cmd [[
-
-    function! TrimTrailingWhitespaces()
-        let l = line(".")
-        let c = col(".")
-        %s/\s\+$//e
-        call cursor(l, c)
-    endfunction
-
-    augroup trim_trailing_whitespaces
-        autocmd!
-        autocmd BufWritePre * :call TrimTrailingWhitespaces()
-    augroup END
-
-]]
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*",
+    callback = function(args)
+        local l = vim.fn.line(".")
+        local c = vim.fn.col(".")
+        vim.cmd [[%s/\s\+$//e]]
+        vim.fn.cursor(l, c)
+    end
+})
