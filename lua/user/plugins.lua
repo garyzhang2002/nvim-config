@@ -54,6 +54,8 @@ return packer.startup(function(use)
     use "folke/tokyonight.nvim"
     -- GitHub Copilot
     use {"github/copilot.vim", config = function() require("user.copilot") end}
+    -- WakaTime
+    use "wakatime/vim-wakatime"
     -- git
     use {"lewis6991/gitsigns.nvim", config = function() require("user.gitsigns") end}
     -- commenting
