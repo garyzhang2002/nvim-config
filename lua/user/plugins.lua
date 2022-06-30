@@ -12,7 +12,9 @@ if fn.empty(fn.glob(install_path)) > 0 then
         "https://github.com/wbthomason/packer.nvim",
         install_path
     }
-    print "Finished. Please reload Neovim after the plugins are installed."
+    print "Finished."
+    print "Please reload Neovim after the plugins are installed."
+    print "Now press ENTER and wait for packer to install the plugins."
     vim.cmd [[packadd packer.nvim]]
 end
 
