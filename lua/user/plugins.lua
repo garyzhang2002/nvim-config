@@ -53,13 +53,13 @@ return packer.startup(function(use)
     use "joshdick/onedark.vim"
     use "folke/tokyonight.nvim"
     -- GitHub Copilot
-    use "github/copilot.vim"
+    use {"github/copilot.vim", config = function() require("user.copilot") end}
     -- git
-    use "lewis6991/gitsigns.nvim"
+    use {"lewis6991/gitsigns.nvim", config = function() require("user.gitsigns") end}
     -- commenting
-    use "terrortylor/nvim-comment"
+    use {"terrortylor/nvim-comment", config = function() require("user.nvim-comment") end}
     -- surround
-    use "kylechui/nvim-surround"
+    use {"kylechui/nvim-surround", config = function() require("user.nvim-surround") end}
     ----------------------------------------------------
 
     -- automatically set up the configuration after cloning packer.nvim
