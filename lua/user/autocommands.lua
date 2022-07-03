@@ -20,3 +20,9 @@ vim.api.nvim_create_autocmd("CmdlineLeave", {
     pattern = "/,?",
     command = ":set nohlsearch"
 })
+
+vim.api.nvim_create_autocmd("VimLeave", {
+    group = vim.api.nvim_create_augroup("reset_cursor_style", {clear = true}),
+    pattern = "*",
+    command = "set guicursor=a:ver30-blinkon300"
+})
