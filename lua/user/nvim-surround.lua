@@ -3,6 +3,6 @@ require("nvim-surround").setup {
         insert = "ys",
         visual = "S",
         delete = "ds",
-        change = "cs",
+        change = "cs"
     }
 }
