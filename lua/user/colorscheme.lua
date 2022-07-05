@@ -1,6 +1,6 @@
 -- change the colorscheme here
 local colorscheme = "onedark"
-local bg = "NONE"
+local transparent_bg = true
 
 local install_path = vim.fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
@@ -15,4 +15,6 @@ if not status_ok then
     return
 end
 
-vim.cmd("highlight Normal guibg=" .. bg)
+if transparent_bg then
+    vim.cmd "highlight Normal guibg=NONE"
+end
