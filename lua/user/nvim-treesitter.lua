@@ -27,9 +27,3 @@ vim.api.nvim_create_autocmd({"BufReadPost", "FileReadPost"}, {
     pattern = "*",
     command = "normal zR"
 })
-
-vim.api.nvim_create_autocmd("BufEnter", {
-    group = vim.api.nvim_create_augroup("update_treesitter_parsers", {clear = true}),
-    pattern = "*",
-    command = "silent TSUpdate"
-})
