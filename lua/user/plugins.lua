@@ -52,7 +52,7 @@ return packer.startup(function(use)
     use "joshdick/onedark.vim"
     use "folke/tokyonight.nvim"
     -- Tree-sitter
-    use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = function() require("user.nvim-treesitter") end}
+    use {"nvim-treesitter/nvim-treesitter", config = function() require("user.nvim-treesitter") end}
     -- GitHub Copilot
     use {"github/copilot.vim", config = function() require("user.copilot") end}
     -- WakaTime
