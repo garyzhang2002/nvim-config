@@ -35,7 +35,7 @@ end
 packer.init {
     display = {
         open_fn = function()
-            return require("packer.util").float { border = "rounded" }
+            return require("packer.util").float {border = "rounded"}
         end
     }
 }
@@ -57,6 +57,7 @@ return packer.startup(function(use)
     use {
         "hrsh7th/nvim-cmp",
         requires = {
+            "onsails/lspkind.nvim",
             "hrsh7th/cmp-buffer",
             "hrsh7th/cmp-path",
             {
@@ -66,7 +67,14 @@ return packer.startup(function(use)
                     "rafamadriz/friendly-snippets"
                 }
             },
-            "onsails/lspkind.nvim"
+            {
+                "hrsh7th/cmp-nvim-lsp",
+                requires = {
+                    "williamboman/nvim-lsp-installer",
+                    "neovim/nvim-lspconfig"
+                },
+                config = function() require "user.plugins.lsp" end
+            },
         },
         config = function() require "user.plugins.nvim-cmp" end
     }

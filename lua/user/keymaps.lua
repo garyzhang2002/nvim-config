@@ -1,5 +1,5 @@
 local keymap = vim.api.nvim_set_keymap
-no_re_opts = {noremap = true, silent = true}
+local no_re_opts = {noremap = true, silent = true}
 
 -- move line(s) up or down
 keymap("n", "<A-j>", ":silent! move .+1<CR>", no_re_opts) -- use silent! to avoid error messages when moving over boundaries

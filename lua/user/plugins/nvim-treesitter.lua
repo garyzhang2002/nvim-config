@@ -1,5 +1,5 @@
 require("nvim-treesitter.configs").setup {
-    ensure_installed = {"python", "c", "cpp", "lua", "java", "html", "css", "javascript", "typescript", "json", "markdown", "latex"},
+    ensure_installed = {"python", "c", "cpp", "lua", "java", "html", "css", "javascript", "typescript", "json", "markdown", "latex", "go", "ruby", "perl", "c_sharp", "cmake"},
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = false
@@ -14,7 +14,7 @@ require("nvim-treesitter.configs").setup {
         }
     },
     indent = {
-        enable = true
+        enable = false -- indentation based on treesitter doesn't seem to work
     }
 }
 
