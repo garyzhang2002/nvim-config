@@ -18,12 +18,12 @@ require("nvim-treesitter.configs").setup {
     }
 }
 
--- enable syntax based code folding powered by Tree-sitter
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
--- automatically unfold all folds on open
-vim.api.nvim_create_autocmd({"BufReadPost", "FileReadPost"}, {
-    group = vim.api.nvim_create_augroup("unfold_all_folds", {clear = true}),
-    pattern = "*",
-    command = "normal zR"
-})
+-- -- enable syntax based code folding powered by Tree-sitter
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- -- automatically unfold all folds on open
+-- vim.api.nvim_create_autocmd({"BufReadPost", "FileReadPost"}, {
+--     group = vim.api.nvim_create_augroup("unfold_all_folds", {clear = true}),
+--     pattern = "*",
+--     command = "normal zR"
+-- })

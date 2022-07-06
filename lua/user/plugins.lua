@@ -52,7 +52,7 @@ return packer.startup(function(use)
     use "joshdick/onedark.vim"
     use "folke/tokyonight.nvim"
     -- Tree-sitter
-    use {"nvim-treesitter/nvim-treesitter", run = ":silent! TSUpdate", config = function() require "user.nvim-treesitter" end}
+    use {"nvim-treesitter/nvim-treesitter", run = ":silent! TSUpdate", config = function() require "user.plugins.nvim-treesitter" end}
     -- completion
     use {
         "hrsh7th/nvim-cmp",
@@ -68,18 +68,18 @@ return packer.startup(function(use)
             },
             "onsails/lspkind.nvim"
         },
-        config = function() require "user.nvim-cmp" end
+        config = function() require "user.plugins.nvim-cmp" end
     }
     -- GitHub Copilot
-    use {"github/copilot.vim", config = function() require "user.copilot" end}
+    use {"github/copilot.vim", config = function() require "user.plugins.copilot" end}
     -- WakaTime
     use "wakatime/vim-wakatime"
     -- git
-    use {"lewis6991/gitsigns.nvim", config = function() require "user.gitsigns" end}
+    use {"lewis6991/gitsigns.nvim", config = function() require "user.plugins.gitsigns" end}
     -- commenting
-    use {"terrortylor/nvim-comment", config = function() require "user.nvim-comment" end}
+    use {"terrortylor/nvim-comment", config = function() require "user.plugins.nvim-comment" end}
     -- surround
-    use {"kylechui/nvim-surround", config = function() require "user.nvim-surround" end}
+    use {"kylechui/nvim-surround", config = function() require "user.plugins.nvim-surround" end}
     ----------------------------------------------------
 
     -- automatically set up the configuration after cloning packer.nvim
