@@ -2,6 +2,7 @@
 
 + Neovim version **0.7.0** or higher.
 + A C compiler in your path.
++ Github CLI (authenticated) in your path.
 
 ## Usage
 

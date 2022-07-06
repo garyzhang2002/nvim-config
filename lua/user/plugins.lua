@@ -74,6 +74,8 @@ return packer.startup(function(use)
     use {"github/copilot.vim", config = function() require "user.plugins.copilot" end}
     -- WakaTime
     use "wakatime/vim-wakatime"
+    -- file explorer tree
+    use {"kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons", config = function() require "user.plugins.nvim-tree" end}
     -- git
     use {"lewis6991/gitsigns.nvim", config = function() require "user.plugins.gitsigns" end}
     -- commenting
