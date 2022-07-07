@@ -49,7 +49,7 @@ return packer.startup(function(use)
 
     -------------------- my plugins --------------------
     -- colorschemes
-    use "joshdick/onedark.vim"
+    use "olimorris/onedarkpro.nvim"
     use "folke/tokyonight.nvim"
     -- Tree-sitter
     use {"nvim-treesitter/nvim-treesitter", run = ":silent! TSUpdate", config = function() require "user.plugins.nvim-treesitter" end}
@@ -84,6 +84,10 @@ return packer.startup(function(use)
     use "wakatime/vim-wakatime"
     -- file explorer tree
     use {"kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons", config = function() require "user.plugins.nvim-tree" end}
+    -- status line
+    use {"nvim-lualine/lualine.nvim", requires = "kyazdani42/nvim-web-devicons", config = function() require "user.plugins.lualine" end}
+    -- buffer line
+    use {"akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons", config = function() require "user.plugins.bufferline" end}
     -- git
     use {"lewis6991/gitsigns.nvim", config = function() require "user.plugins.gitsigns" end}
     -- commenting
