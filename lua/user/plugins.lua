@@ -49,7 +49,7 @@ return packer.startup(function(use)
 
     -------------------- my plugins --------------------
     -- colorschemes
-    use "olimorris/onedarkpro.nvim"
+    use "navarasu/onedark.nvim"
     use "folke/tokyonight.nvim"
     -- Tree-sitter
     use {"nvim-treesitter/nvim-treesitter", run = ":silent! TSUpdate", config = function() require "user.plugins.nvim-treesitter" end}
