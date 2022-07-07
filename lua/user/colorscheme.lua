@@ -1,5 +1,5 @@
 -- change the colorscheme here
-local colorscheme = "onedark"
+local colorscheme = "onedarkpro"
 local transparent_bg = false
 
 local install_path = vim.fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
