@@ -1,6 +1,5 @@
 -- change the colorscheme here
 local colorscheme = "onedarkpro"
-local transparent_bg = false
 
 local install_path = vim.fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
@@ -9,12 +8,8 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
     return
 end
 
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+local status_ok, _ = pcall(require, "user.colorschemes." .. colorscheme)
 if not status_ok then
-    vim.notify("Colorscheme " .. colorscheme .. " not found!", vim.log.levels.WARN)
+    vim.notify("Failed to set colorscheme " .. colorscheme .. "!", vim.log.levels.WARN)
     return
-end
-
-if transparent_bg then
-    vim.cmd "highlight Normal guibg=NONE"
 end
