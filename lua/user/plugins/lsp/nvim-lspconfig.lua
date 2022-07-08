@@ -42,3 +42,26 @@ require("lspconfig").clangd.setup {
     on_attach = on_attach,
     flags = lsp_flags
 }
+
+vim.diagnostic.config {
+    virtual_text = false,
+    update_in_insert = false,
+    underline = true,
+    severity_sort = false,
+    float = {
+        focusable = false,
+        border = "rounded",
+        source = "always"
+    }
+}
+
+local diagnostic_signs = {
+    {name = "DiagnosticSignError", text = ""},
+    {name = "DiagnosticSignWarn", text = ""},
+    {name = "DiagnosticSignHint", text = ""},
+    {name = "DiagnosticSignInfo", text = ""}
+}
+
+for _, sign in ipairs(diagnostic_signs) do
+    vim.fn.sign_define(sign.name, {texthl = sign.name, text = sign.text})
+end

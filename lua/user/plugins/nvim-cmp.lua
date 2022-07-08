@@ -47,16 +47,16 @@ cmp.setup {
         format = lspkind.cmp_format({
             mode = "symbol",
             menu = ({
-                buffer = " [Buffer]",
                 nvim_lsp = " [LSP]",
+                buffer = " [Buffer]",
                 luasnip = " [LuaSnip]",
                 path = " [Path]"
             })
         })
     },
     sources = {
-        {name = "buffer"},
         {name = "nvim_lsp"},
+        {name = "buffer"},
         {name = "luasnip"},
         {name = "path"}
     },
