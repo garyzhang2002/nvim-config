@@ -94,6 +94,8 @@ return packer.startup(function(use)
     use {"terrortylor/nvim-comment", config = function() require "user.plugins.nvim-comment" end}
     -- surround
     use {"kylechui/nvim-surround", config = function() require "user.plugins.nvim-surround" end}
+    -- motion
+    use {"phaazon/hop.nvim", config = function() require "user.plugins.hop" end}
     ----------------------------------------------------
 
     -- automatically set up the configuration after cloning packer.nvim

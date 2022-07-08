@@ -12,5 +12,3 @@ keymap("v", "<A-k>", "<Esc>:silent! '<,'>move '<-2<CR>gv", no_re_opts)
 -- stay in visual mode after indenting so that consecutive indenting is allowed
 keymap("v", ">", ">gv", no_re_opts)
 keymap("v", "<", "<gv", no_re_opts)
-
-keymap("n", "<C-b>", ":NvimTreeToggle<CR>", no_re_opts)
