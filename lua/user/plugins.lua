@@ -96,6 +96,8 @@ return packer.startup(function(use)
     use {"kylechui/nvim-surround", config = function() require "user.plugins.nvim-surround" end}
     -- motion
     use {"phaazon/hop.nvim", config = function() require "user.plugins.hop" end}
+    -- fuzzy finder
+    use {"nvim-telescope/telescope.nvim", config = function() require "user.plugins.telescope" end}
     ----------------------------------------------------
 
     -- automatically set up the configuration after cloning packer.nvim
