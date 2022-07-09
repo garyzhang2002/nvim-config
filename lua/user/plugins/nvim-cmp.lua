@@ -29,7 +29,15 @@ cmp.setup {
         ["<C-k>"] = cmp.mapping.select_prev_item(),
         ["<C-f>"] = cmp.mapping.scroll_docs(2),
         ["<C-b>"] = cmp.mapping.scroll_docs(-2),
-        ["<C-e>"] = cmp.mapping.abort(),
+        ["<Esc>"] = cmp.mapping(
+            function (fallback)
+                if cmp.visible() then
+                    cmp.abort()
+                else
+                    fallback()
+                end
+            end
+        ),
         ["<Tab>"] = cmp.mapping(
             function(fallback)
                 if cmp.visible() then
