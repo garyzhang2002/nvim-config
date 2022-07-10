@@ -53,7 +53,7 @@ return packer.startup(function(use)
     use "folke/tokyonight.nvim"
     -- Tree-sitter
     use {"nvim-treesitter/nvim-treesitter", run = ":silent! TSUpdate", config = function() require "user.plugins.nvim-treesitter" end}
-    -- completion
+    -- completion & lsp
     use {
         "hrsh7th/nvim-cmp",
         requires = {
@@ -98,6 +98,8 @@ return packer.startup(function(use)
     use {"phaazon/hop.nvim", config = function() require "user.plugins.hop" end}
     -- fuzzy finder
     use {"nvim-telescope/telescope.nvim", config = function() require "user.plugins.telescope" end}
+    -- terminal
+    use {"akinsho/toggleterm.nvim", config = function() require "user.plugins.toggleterm" end}
     ----------------------------------------------------
 
     -- automatically set up the configuration after cloning packer.nvim
