@@ -9,3 +9,10 @@
 ``` shell
 git clone https://github.com/garyzhang2002/nvim-config.git ~/.config/nvim
 ```
+
+## Todos
+
++ nvim-dap
++ symbols-outline.nvim
++ lspsage.nvim
++ which-key.nvim
