@@ -18,9 +18,12 @@ if fn.empty(fn.glob(install_path)) > 0 then
     vim.cmd [[packadd packer.nvim]]
 end
 
+local autocmd = vim.api.nvim_create_autocmd
+local augroup = vim.api.nvim_create_augroup
+
 -- automatically source this file and PackerSync on save
-vim.api.nvim_create_autocmd("BufWritePost", {
-    group = vim.api.nvim_create_augroup("source_plugins_and_packersync", {clear = true}),
+autocmd("BufWritePost", {
+    group = augroup("source_plugins_and_packersync", {clear = true}),
     pattern = "plugins.lua",
     command = "source <afile> | PackerSync"
 })

@@ -1,5 +1,8 @@
-vim.api.nvim_create_autocmd("BufWritePre", {
-    group = vim.api.nvim_create_augroup("trim_trailing_whitespaces", {clear = true}),
+local autocmd = vim.api.nvim_create_autocmd
+local augroup = vim.api.nvim_create_augroup
+
+autocmd("BufWritePre", {
+    group = augroup("trim_trailing_whitespaces", {clear = true}),
     pattern = "*",
     callback = function()
         local l = vim.fn.line(".")
@@ -9,20 +12,20 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     end
 })
 
-vim.api.nvim_create_augroup("stop_highlight_after_search", {clear = true})
-vim.api.nvim_create_autocmd("CmdlineEnter", {
+augroup("stop_highlight_after_search", {clear = true})
+autocmd("CmdlineEnter", {
     group = "stop_highlight_after_search",
     pattern = "/,?",
     command = ":set hlsearch"
 })
-vim.api.nvim_create_autocmd("CmdlineLeave", {
+autocmd("CmdlineLeave", {
     group = "stop_highlight_after_search",
     pattern = "/,?",
     command = ":set nohlsearch"
 })
 
-vim.api.nvim_create_autocmd("VimLeave", {
-    group = vim.api.nvim_create_augroup("reset_cursor_style", {clear = true}),
+autocmd("VimLeave", {
+    group = augroup("reset_cursor_style", {clear = true}),
     pattern = "*",
     command = "set guicursor=a:ver30-blinkon300"
 })
