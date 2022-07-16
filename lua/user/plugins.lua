@@ -94,7 +94,7 @@ return packer.startup(function(use)
     -- git
     use {"lewis6991/gitsigns.nvim", config = function() require "user.plugins.gitsigns" end}
     -- commenting
-    use {"terrortylor/nvim-comment", config = function() require "user.plugins.nvim-comment" end}
+    use {"numToStr/Comment.nvim", config = function() require "user.plugins.comment" end}
     -- surround
     use {"kylechui/nvim-surround", config = function() require "user.plugins.nvim-surround" end}
     -- motion
