@@ -16,3 +16,4 @@ keymap("v", "<", "<gv", no_re_opts)
 -- navigate buffers
 keymap("n", "<Leader>[", ":bprevious<CR>", no_re_opts)
 keymap("n", "<Leader>]", ":bnext<CR>", no_re_opts)
+keymap("n", "<Leader>x", ":bdelete<CR>", no_re_opts)
