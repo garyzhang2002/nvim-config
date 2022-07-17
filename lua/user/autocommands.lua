@@ -16,12 +16,12 @@ augroup("stop_highlight_after_search", {clear = true})
 autocmd("CmdlineEnter", {
     group = "stop_highlight_after_search",
     pattern = "/,?",
-    command = ":set hlsearch"
+    command = "set hlsearch"
 })
 autocmd("CmdlineLeave", {
     group = "stop_highlight_after_search",
     pattern = "/,?",
-    command = ":set nohlsearch"
+    command = "set nohlsearch"
 })
 
 autocmd("VimLeave", {
