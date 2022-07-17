@@ -7,7 +7,7 @@
 ## Usage
 
 ``` shell
-git clone https://github.com/garyzhang2002/nvim-config.git ~/.config/nvim
+git clone -b main https://github.com/garyzhang2002/nvim-config.git ~/.config/nvim
 ```
 
 ## Todos
