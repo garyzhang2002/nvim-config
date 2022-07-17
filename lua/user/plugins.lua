@@ -55,7 +55,7 @@ return packer.startup(function(use)
     use "navarasu/onedark.nvim"
     use "folke/tokyonight.nvim"
     -- Tree-sitter
-    use {"nvim-treesitter/nvim-treesitter", run = ":silent! TSUpdate", config = function() require "user.plugins.nvim-treesitter" end}
+    use {"nvim-treesitter/nvim-treesitter", run = ":silent! TSUpdate", config = "require 'user.plugins.nvim-treesitter'"}
     -- completion & lsp
     use {
         "hrsh7th/nvim-cmp",
@@ -76,33 +76,33 @@ return packer.startup(function(use)
                     "williamboman/nvim-lsp-installer",
                     "neovim/nvim-lspconfig"
                 },
-                config = function() require "user.plugins.lsp" end
+                config = "require 'user.plugins.lsp'"
             },
         },
-        config = function() require "user.plugins.nvim-cmp" end
+        config = "require 'user.plugins.nvim-cmp'"
     }
     -- GitHub Copilot
-    use {"github/copilot.vim", config = function() require "user.plugins.copilot" end}
+    use {"github/copilot.vim", config = "require 'user.plugins.copilot'"}
     -- WakaTime
     use "wakatime/vim-wakatime"
     -- file explorer tree
-    use {"kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons", config = function() require "user.plugins.nvim-tree" end}
+    use {"kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons", config = "require 'user.plugins.nvim-tree'"}
     -- status line
-    use {"nvim-lualine/lualine.nvim", requires = "kyazdani42/nvim-web-devicons", config = function() require "user.plugins.lualine" end}
+    use {"nvim-lualine/lualine.nvim", requires = "kyazdani42/nvim-web-devicons", config = "require 'user.plugins.lualine'"}
     -- buffer line
-    use {"akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons", config = function() require "user.plugins.bufferline" end}
+    use {"akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons", config = "require 'user.plugins.bufferline'"}
     -- git
-    use {"lewis6991/gitsigns.nvim", config = function() require "user.plugins.gitsigns" end}
+    use {"lewis6991/gitsigns.nvim", config = "require 'user.plugins.gitsigns'"}
     -- commenting
-    use {"numToStr/Comment.nvim", config = function() require "user.plugins.comment" end}
+    use {"numToStr/Comment.nvim", config = "require 'user.plugins.comment'"}
     -- surround
-    use {"kylechui/nvim-surround", config = function() require "user.plugins.nvim-surround" end}
+    use {"kylechui/nvim-surround", config = "require 'user.plugins.nvim-surround'"}
     -- motion
-    use {"phaazon/hop.nvim", config = function() require "user.plugins.hop" end}
+    use {"phaazon/hop.nvim", config = "require 'user.plugins.hop'"}
     -- fuzzy finder
-    use {"nvim-telescope/telescope.nvim", config = function() require "user.plugins.telescope" end}
+    use {"nvim-telescope/telescope.nvim", config = "require 'user.plugins.telescope'"}
     -- terminal
-    use {"akinsho/toggleterm.nvim", config = function() require "user.plugins.toggleterm" end}
+    use {"akinsho/toggleterm.nvim", config = "require 'user.plugins.toggleterm'"}
     ----------------------------------------------------
 
     -- automatically set up the configuration after cloning packer.nvim
