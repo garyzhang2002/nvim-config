@@ -85,9 +85,9 @@ return packer.startup(function(use)
         config = "require 'user.plugins.nvim-cmp'"
     }
     -- GitHub Copilot
-    use {"github/copilot.vim", commit = "c2e75a3a7519c126c6fdb35984976df9ae13f564", config = "require 'user.plugins.copilot'"}
+    use {"github/copilot.vim", disable = true, commit = "c2e75a3a7519c126c6fdb35984976df9ae13f564", config = "require 'user.plugins.copilot'"}
     -- WakaTime
-    use {"wakatime/vim-wakatime", commit = "4692ec3e77ade9e65171182296cca74352a39a12"}
+    use {"wakatime/vim-wakatime", disable = true, commit = "4692ec3e77ade9e65171182296cca74352a39a12"}
     -- file explorer tree
     use {"kyazdani42/nvim-tree.lua", commit = "06e48c29c4543331eee41753e69e3bd2235bf430", requires = "kyazdani42/nvim-web-devicons", config = "require 'user.plugins.nvim-tree'"}
     -- status line
