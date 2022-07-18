@@ -24,7 +24,7 @@ local augroup = vim.api.nvim_create_augroup
 -- automatically source this file and PackerSync on save
 autocmd("BufWritePost", {
     group = augroup("source_plugins_and_packersync", {clear = true}),
-    pattern = "plugins.lua",
+    pattern = "*/plugins/init.lua",
     command = "source <afile> | PackerSync"
 })
 
