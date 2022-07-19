@@ -30,18 +30,13 @@ local lsp_flags = {
     debounce_text_changes = 150,
 }
 
-require("lspconfig").pyright.setup {
-    on_attach = on_attach,
-    flags = lsp_flags
-}
-require("lspconfig").sumneko_lua.setup {
-    on_attach = on_attach,
-    flags = lsp_flags
-}
-require("lspconfig").clangd.setup {
-    on_attach = on_attach,
-    flags = lsp_flags
-}
+local servers = {"pyright", "clangd", "sumneko_lua"}
+for _, lsp_server in ipairs(servers) do
+    require("lspconfig")[lsp_server].setup {
+        on_attach = on_attach,
+        flags = lsp_flags
+    }
+end
 
 vim.diagnostic.config {
     virtual_text = false,
@@ -65,3 +60,9 @@ local diagnostic_signs = {
 for _, sign in ipairs(diagnostic_signs) do
     vim.fn.sign_define(sign.name, {texthl = sign.name, text = sign.text})
 end
+
+-- expose following local configuration variables for further use in nvim-cmp.lua
+return {
+    on_attach = on_attach,
+    lsp_flags = lsp_flags
+}
