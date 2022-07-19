@@ -1,10 +1,12 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
-local servers = {"sumneko_lua", "pyright", "clangd"}
-for _, lsp in ipairs(servers) do
-    require("lspconfig")[lsp].setup {
-        capabilities = capabilities,
+local servers = {"pyright", "clangd", "sumneko_lua"}
+for _, lsp_server in ipairs(servers) do
+    require("lspconfig")[lsp_server].setup {
+        on_attach = require("user.plugins.lsp.nvim-lspconfig").on_attach,
+        flags = require("user.plugins.lsp.nvim-lspconfig").lsp_flags,
+        capabilities = capabilities
     }
 end
 
