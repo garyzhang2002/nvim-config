@@ -27,7 +27,7 @@ local on_attach = function(client, buffer_number)
 end
 
 local lsp_flags = {
-    debounce_text_changes = 150,
+    debounce_text_changes = 150
 }
 
 local servers = {"pyright", "clangd", "sumneko_lua"}
